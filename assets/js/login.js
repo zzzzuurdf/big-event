@@ -6,11 +6,6 @@ $(function () {
     })
 
 
-
-
-
-
-
     // 注册、登录页面切换
     $('#link_reg').on('click', function () {
         $('.login').hide();
@@ -70,13 +65,10 @@ $(function () {
         const username = $('#reg_form [name=username]').val();
         const password = $('#reg_form [name=password]').val();
         $.post('/api/reguser', { username: username, password: password }, function (res) {
-            if (res.status != 0) {
-
+            if (res.status !== 0) {
                 return layer.msg(res.message, {
                     icon: 2,
                     time: 2000 //2秒关闭（如果不配置，默认是3秒）
-                }, function () {
-                    //do something
                 });
             }
             layer.msg(res.message, {
@@ -99,21 +91,16 @@ $(function () {
             data: $(this).serialize(),
             success: function (res) {
                 if (res.status !== 0) {
+
                     return layer.msg(res.message, {
                         icon: 2,
                         time: 2000 //2秒关闭（如果不配置，默认是3秒）
-                    }, function () {
-                        //do something
                     });
                 }
                 // 利用本地存储存储token的值⭐⭐⭐
                 localStorage.setItem('token', res.token);
-                layer.msg(res.message, {
-                    icon: 1,
-                    time: 1000 //2秒关闭（如果不配置，默认是3秒）
-                }, function () {
-                    location.href = 'index.html'
-                });
+
+                location.href = 'index.html'
             }
         })
     })

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./assets/fonts/iconfont.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo layui-hide-xs layui-bg-black">
+                <img src="./assets/images/logo.png" alt="">
+            </div>
+            <!-- 头部区域（可配合layui 已有的水平导航） -->
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+                    <a href="javascript:;">
+                        <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
+                            class="layui-nav-img">
+                        <span class="text-avatar">Z</span>
+                        个人中心
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">基本资料</a></dd>
+                        <dd><a href="">更换头像</a></dd>
+                        <dd><a href="">重置密码</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+                    <a href="javascript:;" class="logOut">
+                        <span class="iconfont icon-tuichu"></span>
+                        退出
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div>
+                <div class="use_info">
+                    <a href="javascript:;">
+                        <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
+                            class="layui-nav-img">
+                        <span class="text-avatar">Z</span>
+                        <span class="welcome">xxx 欢迎您</span>
+                    </a>
+                </div>
+
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <!-- ⭐⭐⭐lay-shrink="all" 收缩兄弟节点已展开的子菜单 加给父元素-->
+                <ul class="layui-nav layui-nav-tree" lay-shrink="all">
+                    <!-- ⭐⭐⭐layui-this默认选中显示当前导航 -->
+                    <li class="layui-nav-item layui-this"><a href="javascript:;" target="fm"> <span
+                                class="iconfont icon-shouye"></span>首页</a>
+                    </li>
+
+
+                    <li class="layui-nav-item ">
+                        <a class="" href="javascript:;"> <span class="iconfont icon-wenzhangguanli"></span>文章管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;"> <span class="iconfont icon-leibie son"></span>文章类别</a></dd>
+                            <dd><a href="javascript:;"> <span class="iconfont icon-liebiao_o son"></span>文章列表</a></dd>
+                            <dd><a href="javascript:;"> <span class="iconfont icon-ziyuan60 son"></span>发表文章</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;"><span class="iconfont icon-jibenziliao "></span>个人中心</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;"> <span class="iconfont icon-jibenziliao son"></span>基本资料</a></dd>
+                            <dd><a href="javascript:;"> <span class="iconfont icon-touxiang son"></span>更换头像</a></dd>
+                            <dd><a href="javascript:;"> <span class="iconfont icon-xiugaimima
+                                son"></span>重置密码</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <iframe src="./home/dashboard.html" name="fm" frameborder="0"></iframe>
+        </div>
+
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            @大事件管理系统后台
+        </div>
+    </div>
+    <script src="./assets/lib/jquery.js"></script>
+    <!-- <script src="./assets/js/baseAPI.js"></script> -->
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
