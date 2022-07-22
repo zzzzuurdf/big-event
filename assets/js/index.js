@@ -39,7 +39,7 @@ function getUserInfo() {
                 });
             }
             getAvatar(res.data)
-            console.log(res);
+            // console.log(res);
         },
         complete: function (res) {
             if (res.responseJSON.status == 1 && res.responseJSON.message == "身份认证失败！") {
